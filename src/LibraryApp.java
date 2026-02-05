@@ -11,6 +11,7 @@ public class LibraryApp {
             System.out.println("3. Check out book");
             System.out.println("4. Return book");
             System.out.println("5. Quit");
+            System.out.println("6. Remove book");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -39,6 +40,11 @@ public class LibraryApp {
                     System.out.println("Goodbye!");
                     scanner.close();
                     return;
+                }
+                case 6 -> {
+                    System.out.print("Book number to remove: ");
+                    int num = scanner.nextInt();
+                    library.removeBook(num - 1);
                 }
                 default -> System.out.println("Invalid option.");
             }

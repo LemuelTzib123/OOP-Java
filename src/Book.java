@@ -28,5 +28,4 @@ public class Book {
             return title + " by " + author + "(Checked out)";
         }
     }
-
 }
